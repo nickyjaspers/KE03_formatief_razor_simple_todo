@@ -1,0 +1,42 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Mijn todo lijst";
+}
+
+<h1 class="display-4">Mijn todo lijst:</h1>
+<div class="container">
+<form method="post">
+    
+    @if (Model.Tasks != null)
+    {        
+        foreach (var task in Model.Tasks)
+        {
+            <div class="row">
+                @if (task.IsDone)
+                {
+                    <div class="col">
+                        <strike>@task.Description</strike>
+                    </div>
+                    <div class="col">
+                        <button type="submit" asp-page-handler="done" asp-route-id="@task.Id">undone</button>
+                    </div>
+                    
+                }
+                else
+                {
+                    <div class="col">
+                        @task.Description
+                    </div>
+                    <div class="col">
+                        <button type="submit" asp-page-handler="done" asp-route-id="@task.Id">done</button>
+                    </div>                    
+                }
+            </div>
+        }
+    }        
+</form>
+</div>
+<p>
+    <a class="btn btn-primary" asp-page="Create">Maak een nieuwe taak</a>
+</p>
