@@ -13,6 +13,12 @@
         foreach (var task in Model.Tasks)
         {
             <div class="row">
+                <!-- 
+                    Wellicht zou je het toepassen van de styling van een taak die de status done heeft, op een andere manier kunnen toepassen.
+                    Dit zou je bijvoorbeeld kunnen doen door een class toe te voegen aan de div die de taak bevat, en deze class te stylen in de CSS.
+                    
+                    Dit werkt ook, maar wellicht heeft iets anders je voorkeur.
+                -->
                 @if (task.IsDone)
                 {
                     <div class="col">
