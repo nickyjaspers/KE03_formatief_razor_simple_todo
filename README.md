@@ -1,8 +1,14 @@
 # KE03_formatief_razor_simple_todo
-Een eenvoudig voorbeeld van de formatieve opdracht om een todo list te maken.
+Een eenvoudig voorbeeld van de formatieve opdracht om een todo list te maken gebruik makend van Razor Pages architectuur.
 
+## In-memory database
+In dit voorbeeld gebruiken we een in-memory database. Als de applicatie is afgesloten is de data ook weer weg.
+Dis zul je in een echte productie omgeving niet gebruiken.
 
-# branch strategie
+## Verbeteren
+Je kunt dit voorbeeld gebruiken om een hele hoop zaken zelf er aan te verbeteren of te experimenteren.
+
+## Branch strategie
 Voor nu houd ik een hele simpele branching strategie aan. 
 
 We hebben de main:
